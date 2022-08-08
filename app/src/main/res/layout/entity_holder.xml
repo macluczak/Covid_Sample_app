@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+
+    android:backgroundTint="@color/colorPrimary50"
+    style="@style/Widget.Material3.CardView.Filled"
+    android:layout_marginHorizontal="15dp"
+    android:layout_marginBottom="15sp">
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#00002E02"
+        android:orientation="vertical">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/countryBar"
+            app:cardCornerRadius="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            style="@style/Widget.Material3.CardView.Elevated"
+            android:elevation="4dp"
+            >
+
+
+
+            <TextView
+                android:id="@+id/country"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:textStyle="bold"
+                android:letterSpacing="0.05"
+                android:lines="1"
+                android:gravity="center"
+                android:maxLines="1"
+                android:background="@drawable/gradient100"
+                android:textColor="@color/colorPrimary50"
+                android:text="Poland"
+                android:textSize="18sp" />
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            >
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="10dp"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/geoId"
+                android:textColor="@color/colorPrimary200"
+                android:textAlignment="textStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PL"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_height="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/continent"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="5dp"
+                android:textAlignment="textEnd"
+                android:text="Europe,"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="italic"/>
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:textAlignment="textStart"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary"
+                android:lines="1"
+                android:paddingHorizontal="5dp"
+                android:textStyle="italic"
+                android:maxLines="1"
+
+                tools:text="01/01/2022" />
+
+
+
+
+        </LinearLayout>
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:weightSum="3"
+            android:paddingHorizontal="10dp"
+            >
+
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/cases"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorTextBlack"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:textSize="22dp"
+                    android:text="10"
+                    />
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="2sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    android:textColor="@color/colorPrimar300"
+                    android:text="Cases"/>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/death"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:textColor="#BA1919"
+                    android:textSize="22dp"
+                    android:text="10"
+                    />
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="2sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textSize="12sp"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimar300"
+                    android:text="Deaths"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/culmulative"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorTextBlack"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:textSize="22dp"
+                    android:text="10"
+                    />
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="2sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimar300"
+                    android:text="Culmulative"/>
+
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+
+
+<!--        <TextView-->
+<!--            android:id="@+id/culmulative"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:fontFamily="sans-serif-black"-->
+<!--            android:letterSpacing="0.05"-->
+<!--            android:lines="1"-->
+<!--            android:maxLines="1"-->
+<!--            android:text="Street 20"-->
+<!--            android:textColor="#BA1919"-->
+<!--            android:textSize="18sp"-->
+<!--            tools:text="6.3223423432432" />-->
+
+
+
+
+    </LinearLayout>
+
+
+
+
+</com.google.android.material.card.MaterialCardView>

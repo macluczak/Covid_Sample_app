@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+
+    tools:context=".ScrollingActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        app:liftOnScroll="true"
+        app:titleTextColor="@color/defaultMain"
+        android:elevation="10dp"
+        android:background="@drawable/gradient300"
+
+        >
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout"
+            android:layout_width="match_parent"
+            android:fitsSystemWindows="true"
+            android:elevation="10dp"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
+            android:layout_height="?attr/collapsingToolbarLayoutLargeSize"
+            app:toolbarId="@+id/toolbar"
+            app:titleTextColor="@color/defaultMain"
+            app:collapsedTitleTextColor="@color/defaultMain"
+            app:expandedTitleTextColor="@color/defaultMain"
+            style="?attr/collapsingToolbarLayoutLargeStyle">
+
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
+                android:backgroundTint="@color/colorPrimary"
+                app:titleTextColor="@color/defaultMain"
+
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:title="@string/app_name"
+                app:titleCentered="true"
+                app:subtitleCentered="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="40dp">
+
+                <EditText
+                    android:layout_weight="1"
+                    android:id="@+id/search"
+                    android:maxLines="1"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/defaultMain"
+                    android:textColorHint="@color/defaultMain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="?attr/actionBarSize"
+                    android:hint="Search"/>
+
+            </LinearLayout>
+
+
+
+
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+
+    <com.google.android.material.card.MaterialCardView
+        style="@style/Widget.Material3.CardView.Elevated"
+        android:elevation="10dp"
+        android:id="@+id/card"
+        app:cardCornerRadius="0dp"
+        android:backgroundTint="@color/colorPrimary100"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginHorizontal="10dp"
+            android:paddingTop="45dp"
+            android:clipToPadding="false"
+            android:id="@+id/recyclerList"
+            app:layout_anchor="@id/app_bar"
+            android:layout_gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+
+            />
+
+<!--        <LinearLayout-->
+<!--            android:id="@+id/filters"-->
+<!--            android:paddingHorizontal="15dp"-->
+<!--            android:paddingTop="10dp"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:layout_anchor="@id/app_bar"-->
+<!--            android:layout_gravity="top"-->
+<!--            -->
+<!--            >-->
+
+<!--            <com.google.android.material.card.MaterialCardView-->
+<!--                android:id="@+id/filterReverse"-->
+<!--                style="@style/Widget.Material3.CardView.Elevated"-->
+<!--                android:layout_width="50dp"-->
+<!--                android:elevation="10dp"-->
+<!--                android:layout_height="50dp"-->
+<!--                app:cardCornerRadius="25dp"-->
+<!--                android:layout_marginEnd="10dp"-->
+<!--                android:clickable="true"-->
+<!--                android:focusable="true"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:contentDescription="@string/fab_transformation_sheet_behavior"-->
+<!--                >-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="30dp"-->
+<!--                    android:layout_height="30dp"-->
+<!--                    android:id="@+id/iconFilter"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:src="@drawable/ic_round_filter_list_24"-->
+<!--                    app:tint="@color/colorPrimar300" />-->
+<!--            </com.google.android.material.card.MaterialCardView>-->
+
+<!--            <com.google.android.material.card.MaterialCardView-->
+<!--                android:id="@+id/filterWeight"-->
+<!--                style="@style/Widget.Material3.CardView.Elevated"-->
+<!--                android:elevation="10dp"-->
+<!--                android:layout_width="50dp"-->
+<!--                android:layout_height="50dp"-->
+<!--                app:cardCornerRadius="25dp"-->
+<!--                android:clickable="true"-->
+<!--                android:focusable="true"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:contentDescription="@string/fab_transformation_sheet_behavior"-->
+<!--                >-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="40dp"-->
+<!--                    android:layout_height="40dp"-->
+<!--                    android:id="@+id/iconReverse"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:src="@drawable/ic_baseline_arrow_drop_down_24"-->
+<!--                    app:tint="@color/colorPrimar300" />-->
+<!--            </com.google.android.material.card.MaterialCardView>-->
+
+
+
+
+<!--        </LinearLayout>-->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <ProgressBar
+                android:id="@+id/progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:visibility="visible"
+                />
+
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_alignParentBottom="true"
+                android:foreground="@drawable/gradient200">
+
+
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        android:contentDescription="@string/fab_transformation_sheet_behavior"
+        app:layout_anchor="@id/app_bar"
+        android:elevation="10dp"
+        app:layout_anchorGravity="bottom|end"
+        android:backgroundTint="@color/colorAccent"
+        app:srcCompat="@drawable/ic_outline_file_download_24"
+        app:tint = "@color/defaultMain"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
