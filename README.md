@@ -14,6 +14,8 @@ any blocking I/O operations have been implemented inside coroutines with Disptch
 
 As part of the introduction of clean code, the implementation of a mechanism to prevent the loss of states during screen rotations and the provision of SSoT (Single Source of Truth), applications were implemented within the mvvm architecture pattern
 
+One of the Features additionally implemented as part of the improvements is the ability to search for data using entering a country, continent or date
+
 
 <table>
   <tr>
